@@ -1,0 +1,64 @@
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+.conda/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Java / Maven / Gradle
+target/
+.gradle/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Logs and runtime data
+logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Screenshots and captures
+screenshots/
+captures/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+
+# Packaging output
+packaging/windows/output/
+*.msi
+*.exe
