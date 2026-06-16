@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+pyyaml
+pillow
+numpy
+opencv-python
+mss
+pyautogui
+pytesseract
+pyttsx3
+pywin32
+psutil
+uiautomation
+pytest
