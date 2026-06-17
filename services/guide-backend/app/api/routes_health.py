@@ -17,3 +17,4 @@ async def health(settings: Settings = Depends(get_app_settings)) -> HealthRespon
         version=settings.app_version,
     )
 
+
