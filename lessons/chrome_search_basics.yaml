@@ -1,0 +1,39 @@
+id: chrome_search_basics
+title: Chrome Search Basics
+platform: windows
+version: 1
+
+steps:
+  - id: open_chrome
+    instruction: Open Google Chrome.
+    target:
+      type: approximate_region
+      region: taskbar_or_start
+    validation:
+      strategy: active_window
+      app: chrome
+    hints:
+      - Click the Chrome icon if it is visible on the taskbar.
+      - You can also open Start and search for Chrome.
+
+  - id: click_search_bar
+    instruction: Click the address bar at the top of Chrome.
+    target:
+      type: ui_automation_or_fallback_region
+      role: address_bar
+    validation:
+      strategy: active_window
+      expected_app: chrome
+    hints:
+      - The address bar is the long input field at the top of Chrome.
+
+  - id: search_query
+    instruction: Type "Wikipedia" and press Enter.
+    validation:
+      strategy: browser_search_detected
+      expected_text_any:
+        - Wikipedia
+        - Search
+        - Google
+    hints:
+      - Click the address bar, type Wikipedia, then press Enter.

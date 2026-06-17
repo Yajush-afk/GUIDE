@@ -1,0 +1,10 @@
+[project]
+name = "guide-backend"
+version = "0.1.0"
+description = "Local FastAPI backend for GUIDE."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
