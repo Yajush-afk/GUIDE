@@ -38,13 +38,8 @@ public final class GuideApp extends Application {
     private static final Duration TEXT_FADE_TIME = Duration.millis(110);
 
     private final List<String> tutorials = List.of(
-            "Java Basics",
-            "Object Oriented Java",
-            "Collections Guide",
-            "Exception Handling",
-            "JavaFX Layouts",
-            "CSS Styling",
-            "Maven Setup"
+            "How to Use File Explorer",
+            "How to Open a Website"
     );
 
     private VBox leftSidebar;
@@ -58,6 +53,7 @@ public final class GuideApp extends Application {
     private StackPane contentHost;
     private boolean leftCollapsed;
     private boolean rightCollapsed;
+    private TutorialOverlay tutorialOverlay;
     private boolean darkMode;
     private double dragOffsetX;
     private double dragOffsetY;
@@ -101,7 +97,10 @@ public final class GuideApp extends Application {
         StackPane appFrame = new StackPane(shell);
         appFrame.getStyleClass().add("app-frame");
 
-        appRoot = new StackPane(appFrame);
+        tutorialOverlay = new TutorialOverlay();
+
+        // Add appFrame first, then the overlay on top.
+        appRoot = new StackPane(appFrame, tutorialOverlay);
         appRoot.getStyleClass().add("window-root");
         return appRoot;
     }
@@ -221,8 +220,8 @@ public final class GuideApp extends Application {
         settingsList = new VBox(12);
         settingsList.getStyleClass().add("sidebar-section");
         settingsList.getChildren().addAll(
-                buildSettingToggle("Focus mode"),
-                buildSettingToggle("Show progress"),
+                buildSettingToggle("API Key"),
+                buildSettingToggle("Display settings"),
                 buildSettingToggle("Large text"),
                 new Separator(),
                 buildPlaceholderText("More tutorial preferences can be added here.")
