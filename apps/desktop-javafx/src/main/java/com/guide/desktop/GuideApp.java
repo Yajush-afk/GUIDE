@@ -39,7 +39,8 @@ public final class GuideApp extends Application {
 
     private final List<String> tutorials = List.of(
             "How to Use File Explorer",
-            "How to Open a Website"
+            "How to Open a Website",
+            "change settings on your system"
     );
 
     private VBox leftSidebar;
